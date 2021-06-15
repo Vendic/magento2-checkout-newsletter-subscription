@@ -1,0 +1,21 @@
+{
+    "name": "vendic/magento2-checkout-newsletter-subscription",
+    "description": "The module adds a newsletter subscription checkbox to the default checkout sidebar.",
+    "require": {
+        "magento/module-checkout": "*",
+        "magento/module-newsletter": "*",
+        "magento/magento-composer-installer": "*"
+    },
+    "license": [
+
+    ],
+    "type": "magento2-module",
+    "autoload": {
+        "files": [
+            "registration.php"
+        ],
+        "psr-4": {
+            "Vendic\\CheckoutNewsletterSubscription\\": ""
+        }
+    }
+}
