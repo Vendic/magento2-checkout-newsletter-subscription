@@ -13,15 +13,15 @@ define([
             isChecked: ko.observable(true)
         },
 
-        init: function (config, element) {
+        initialize: function () {
             this._super();
             var self = this;
 
-            self.isChecked = typeof(customerData.get('checkoutNewsletterSubscribe')()) == 'boolean'
-                ? customerData.get('checkoutNewsletterSubscribe')() : true;
+            self.isChecked(typeof(customerData.get('checkoutNewsletterSubscribe')()) == 'boolean'
+                ? customerData.get('checkoutNewsletterSubscribe')() : true);
 
             $(document).on('change', 'input[name="checkout_newsletter_subscribe"]', function () {
-                self.isChecked = $(this).prop('checked');
+                self.isChecked($(this).prop('checked'));
                 customerData.set('checkoutNewsletterSubscribe', self.isChecked);
             });
         }
