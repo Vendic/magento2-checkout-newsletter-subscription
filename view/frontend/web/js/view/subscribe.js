@@ -22,7 +22,7 @@ define([
 
             $(document).on('change', 'input[name="checkout_newsletter_subscribe"]', function () {
                 self.isChecked($(this).prop('checked'));
-                customerData.set('checkoutNewsletterSubscribe', self.isChecked);
+                customerData.set('checkoutNewsletterSubscribe', self.isChecked());
             });
         }
     });
