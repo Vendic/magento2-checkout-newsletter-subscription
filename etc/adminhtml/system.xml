@@ -1,0 +1,40 @@
+<?xml version="1.0"?>
+<config xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+        xsi:noNamespaceSchemaLocation="urn:magento:module:Magento_Config:etc/system_file.xsd">
+    <system>
+        <tab id="vendic" translate="label" sortOrder="600">
+            <label>Vendic</label>
+        </tab>
+        <section id="vendic_checkout_newsletter_subscribe"
+                 translate="label"
+                 type="text"
+                 sortOrder="100"
+                 showInDefault="1"
+                 showInWebsite="1"
+                 showInStore="1">
+            <label>Checkout Newsletter Subscription</label>
+            <tab>vendic</tab>
+            <resource>Vendic_CheckoutNewsletterSubscription::config</resource>
+            <group id="general"
+                   translate="label"
+                   type="text"
+                   sortOrder="1"
+                   showInDefault="1"
+                   showInWebsite="1"
+                   showInStore="1">
+                <label>General</label>
+                <field id="checked_by_default"
+                       translate="label comment"
+                       type="select"
+                       sortOrder="10"
+                       showInDefault="1"
+                       showInWebsite="1"
+                       showInStore="1">
+                    <source_model>Magento\Config\Model\Config\Source\Yesno</source_model>
+                    <label>Checked By Default</label>
+                    <comment>If set to yes - newsletter subscription checkbox will be checked by default on checkout page</comment>
+                </field>
+            </group>
+        </section>
+    </system>
+</config>
