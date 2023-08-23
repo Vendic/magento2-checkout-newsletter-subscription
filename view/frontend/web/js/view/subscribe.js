@@ -18,7 +18,7 @@ define([
             var self = this,
                 defaultValue = true;
 
-            if (window.checkoutConfig.newsletter_subscription_default) {
+            if (window.checkoutConfig.newsletter_subscription_default !== undefined) {
                 defaultValue = window.checkoutConfig.newsletter_subscription_default;
             }
 
