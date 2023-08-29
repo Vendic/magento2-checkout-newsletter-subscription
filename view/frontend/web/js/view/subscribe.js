@@ -15,10 +15,15 @@ define([
 
         initialize: function () {
             this._super();
-            var self = this;
+            var self = this,
+                defaultValue = true;
+
+            if (window.checkoutConfig.newsletter_subscription_default !== undefined) {
+                defaultValue = window.checkoutConfig.newsletter_subscription_default;
+            }
 
             self.isChecked(typeof(customerData.get('checkoutNewsletterSubscribe')()) == 'boolean'
-                ? customerData.get('checkoutNewsletterSubscribe')() : true);
+                ? customerData.get('checkoutNewsletterSubscribe')() : Boolean(defaultValue));
 
             $(document).on('change', 'input[name="checkout_newsletter_subscribe"]', function () {
                 self.isChecked($(this).prop('checked'));
