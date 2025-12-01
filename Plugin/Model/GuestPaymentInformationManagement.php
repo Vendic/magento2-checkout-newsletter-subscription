@@ -56,7 +56,7 @@ class GuestPaymentInformationManagement
         $cartId,
         string $email,
         PaymentInterface $paymentMethod,
-        AddressInterface $billingAddress = null
+        ?AddressInterface $billingAddress = null
     ) {
         // phpcs:disable Generic.Files.LineLength
         /* @phpstan-ignore-next-line */

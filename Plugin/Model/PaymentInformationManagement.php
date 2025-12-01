@@ -53,7 +53,7 @@ class PaymentInformationManagement
         \Magento\Checkout\Model\PaymentInformationManagement $subject,
         $cartId,
         PaymentInterface $paymentMethod,
-        AddressInterface $billingAddress = null
+        ?AddressInterface $billingAddress = null
     ) {
         // phpcs:disable Generic.Files.LineLength
         /* @phpstan-ignore-next-line */
